@@ -6,15 +6,26 @@ package prog2.model;
 
 import prog2.vista.ExcepcioEstacio;
 
+import java.util.*;
+
 /**
  *
  * @author mpuig
  */
 public class LlistaVies implements InLlistaVies{
-
+    private ArrayList<Via> llistaVies;
+    public LlistaVies(ArrayList<Via> _llistaVies){
+        this.llistaVies = _llistaVies;
+    }
     @Override
     public void afegirVia(Via via) throws ExcepcioEstacio {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        for (Via llistaVY : llistaVies) {
+            if (llistaVY.getNom().equals(via.getNom())) {
+                ExcepcioEstacio e = new ExcepcioEstacio("Aquest acces ja accedeix a aquesta via!");
+                throw e;
+            }
+        }
+        this.llistaVies.add(via);
     }
 
     @Override
