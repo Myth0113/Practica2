@@ -20,5 +20,8 @@ public class CintaTransportadora extends AccesNivell{
     public void setVelocitat(double _velocitat){
         this.velocitat = _velocitat;
     }
-    
+    @Override
+    public String toString(){
+        return("Acces de tipus Cinta Transportadora, " + super.toString() + " La cinta transportadora va a una velocitat de " + velocitat + "m/s.");
+    }
 }
