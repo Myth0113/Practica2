@@ -23,4 +23,8 @@ public class EscalaMecanica extends AccesDesnivell{
     public void setMarca(String _marca) {
         this.marca = _marca;
     }
+    @Override
+    public String toString(){
+        return("Acces de tipus Escala Mecanica, " + super.toString() + " L'escala mecànica és de marca " + marca + ".");
+    }
 }
