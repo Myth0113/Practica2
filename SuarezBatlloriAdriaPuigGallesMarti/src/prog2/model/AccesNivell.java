@@ -20,4 +20,8 @@ public abstract class AccesNivell extends Acces{
     public void setLongitud(int lon){
         this.longitud = lon;
     }
+    @Override
+    public String toString(){
+        return(super.toString() + ", té una longitud de " + longitud + "m.");
+    }
 }
