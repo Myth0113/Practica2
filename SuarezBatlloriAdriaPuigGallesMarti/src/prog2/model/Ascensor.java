@@ -22,4 +22,8 @@ public class Ascensor extends AccesDesnivell{
     public void setPesMax(double _pesMax) {
         this.pesMax = _pesMax;
     }
+    @Override
+    public String toString(){
+        return("Acces de tipus Ascensor, " + super.toString() + " L'ascensor suporta fins a " + pesMax + "Kg.");
+    }
 }
