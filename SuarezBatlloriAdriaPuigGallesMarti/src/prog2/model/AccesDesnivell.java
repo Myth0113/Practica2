@@ -20,4 +20,8 @@ public abstract class AccesDesnivell extends Acces{
     public void setDesnivell(int _desnivell) {
         this.desnivell = _desnivell;
     }
+    @Override
+    public String toString(){
+        return(super.toString() + ", té un desnivell de " + desnivell + "m.");
+    }
 }
