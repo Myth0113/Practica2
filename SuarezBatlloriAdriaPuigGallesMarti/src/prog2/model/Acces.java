@@ -5,6 +5,8 @@ package prog2.model;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 
+import prog2.vista.ExcepcioEstacio;
+
 /**
  *
  * @author mpuig
@@ -22,8 +24,11 @@ public abstract class Acces implements InAcces{
     }
     @Override
     public void afegirVia(Via via) {
-        throw new UnsupportedOperationException("Not supported yet.");
-        //PER FER
+        try {
+            this.llistaVies.afegirVia(via);
+        }catch(ExcepcioEstacio e){
+            System.err.println((e.getMessage()));
+        }
     }
 
     @Override
@@ -44,3 +49,4 @@ public abstract class Acces implements InAcces{
                 ". " + acces + " per persones amb mobilitat reduida, i està " + state);
     }
 }
+     
