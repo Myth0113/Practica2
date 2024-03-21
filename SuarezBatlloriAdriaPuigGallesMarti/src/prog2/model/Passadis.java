@@ -12,4 +12,8 @@ public class Passadis extends AccesNivell{
     public Passadis(LlistaVies llista, String _nom, boolean acces, boolean _estat, int _longitud) {
         super(llista, _nom, acces, _estat, _longitud);
     }
+    @Override
+    public String toString(){
+        return("Acces de tipus passadis, " + super.toString());
+    }
 }
