@@ -9,5 +9,7 @@ package prog2.vista;
  * @author mpuig
  */
 public class ExcepcioEstacio extends Exception{
-    
+    public ExcepcioEstacio(String message){
+        super(message);
+    }
 }
